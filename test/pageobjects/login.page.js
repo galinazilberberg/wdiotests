@@ -31,6 +31,13 @@ class LoginPage extends Page {
     errorFieldIsRequired(){
         expect(this.fieldRequired).toBeDisplayed();
     }
+    errorToastAppeared(){
+        expect(this.errorToast).toBeDisplayed();
+    }
+    errorToastAppeared(){
+        expect(this.errorToast).toBeDisplayed();
+    }
+
     }
 export default new LoginPage();
 

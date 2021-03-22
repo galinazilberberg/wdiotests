@@ -44,5 +44,19 @@ describe('Auth', () => {
         LoginPage.errorFieldIsRequired();
 
     });
+    it('auth fails if invalid login entered',()=>{
+        LoginPage.setLogin('example@example.com') ;
+        LoginPage.setPassword('GZ12345');
+        LoginPage.clickSubmitButton();
+        LoginPage.errorToastAppeared();
+
+    });
+    it('auth fails if invalid password entered',()=>{
+        LoginPage.setLogin('fifiti7257@gameqo.com') ;
+        LoginPage.setPassword('12345');
+        LoginPage.clickSubmitButton();
+        LoginPage.errorToastAppeared();
+
+    });
 
 });
